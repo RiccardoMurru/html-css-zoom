@@ -1,0 +1,112 @@
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    background: #000;
+}
+
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Participants */
+.participants {
+    font-size: 12px;
+}
+
+.participants-text span {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.participants-text span::after {
+    content: '';
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.participants .view-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.participants .view-actions .speaker-view,
+.participants .view-actions .full-screen {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.participants .view-actions .speaker-view i {
+    margin-right: 3px;
+}
+/* Users */
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1170px;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+.user-thumbnail {
+    position: relative;
+    flex-basis: 25%;
+    border: 2px solid transparent;
+    transition: .5s;
+}
+
+.user-thumbnail:hover {
+    border-color: #fff;
+}
+
+.user-thumbnail.active {
+    border-color: #9acd32;
+}
+.user-thumbnail img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-thumbnail .name,
+.user-thumbnail i {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    background: rgba(0, 0, 0, .7);
+    padding: 5px;
+}
+
+.user-thumbnail:not(.active) .name {
+    visibility: hidden;
+}
+
+.user-thumbnail.active i {
+    visibility: hidden;
+}
+/* Action-bar */
